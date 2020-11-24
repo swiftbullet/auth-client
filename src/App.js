@@ -1,19 +1,24 @@
+import { useState } from "react";
 import "./App.css";
 import log from "./img/log.svg";
 import register from "./img/register.svg";
 
 function App() {
+  const [isSignIn, setIsSignIn] = useState(false);
+  const mode = isSignIn ? "sign-in-mode" : "sign-up-mode";
   return (
     <div className="App">
-      <div className="container">
+      <div className={`container ${mode}`}>
         <div className="forms-container">
           <div className="signin-signup">
-            <form action="#" className="signin-form">
+            <form action="#" className="sign-in-form">
               <h2 className="title">Sign In</h2>
               <div className="input-field">
+                <i>I</i>
                 <input type="text" name="" id="" placeholder="Username" />
               </div>
               <div className="input-field">
+                <i>I</i>
                 <input type="password" name="" id="" placeholder="Password" />
               </div>
               <input type="submit" value="Login" className="btn solid" />
@@ -22,18 +27,12 @@ function App() {
                 <a href="/" className="social-icon">
                   F
                 </a>
-              </div>
-              <div className="social-media">
                 <a href="/" className="social-icon">
                   T
                 </a>
-              </div>
-              <div className="social-media">
                 <a href="/" className="social-icon">
                   G
                 </a>
-              </div>
-              <div className="social-media">
                 <a href="/" className="social-icon">
                   L
                 </a>
@@ -42,12 +41,15 @@ function App() {
             <form action="#" className="sign-up-form">
               <h2 className="title">Sign Up</h2>
               <div className="input-field">
+                <i>I</i>
                 <input type="text" name="" id="" placeholder="Username" />
               </div>
               <div className="input-field">
+                <i>I</i>
                 <input type="email" name="" id="" placeholder="Email" />
               </div>
               <div className="input-field">
+                <i>I</i>
                 <input type="password" name="" id="" placeholder="Password" />
               </div>
               <input type="submit" value="Sign Up" className="btn" />
@@ -56,18 +58,12 @@ function App() {
                 <a href="/" className="social-icon">
                   F
                 </a>
-              </div>
-              <div className="social-media">
                 <a href="/" className="social-icon">
                   T
                 </a>
-              </div>
-              <div className="social-media">
                 <a href="/" className="social-icon">
                   G
                 </a>
-              </div>
-              <div className="social-media">
                 <a href="/" className="social-icon">
                   L
                 </a>
@@ -86,7 +82,11 @@ function App() {
                 exercitationem beatae incidunt quis expedita, dolore
                 consequatur?
               </p>
-              <button className="btn transparent" id="sign-up-btn">
+              <button
+                className="btn transparent"
+                id="sign-up-btn"
+                onClick={() => setIsSignIn(false)}
+              >
                 Sign Up
               </button>
             </div>
@@ -102,7 +102,11 @@ function App() {
                 exercitationem beatae incidunt quis expedita, dolore
                 consequatur?
               </p>
-              <button className="btn transparent" id="sign-ip-btn">
+              <button
+                className="btn transparent"
+                id="sign-in-btn"
+                onClick={() => setIsSignIn(true)}
+              >
                 Sign In
               </button>
             </div>
