@@ -14,11 +14,15 @@ function App() {
             <form action="#" className="sign-in-form">
               <h2 className="title">Sign In</h2>
               <div className="input-field">
-                <i>I</i>
-                <input type="text" name="" id="" placeholder="Username" />
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  className="input-field"
+                  placeholder="Username"
+                />
               </div>
               <div className="input-field">
-                <i>I</i>
                 <input type="password" name="" id="" placeholder="Password" />
               </div>
               <input type="submit" value="Login" className="btn solid" />
@@ -41,15 +45,12 @@ function App() {
             <form action="#" className="sign-up-form">
               <h2 className="title">Sign Up</h2>
               <div className="input-field">
-                <i>I</i>
                 <input type="text" name="" id="" placeholder="Username" />
               </div>
               <div className="input-field">
-                <i>I</i>
                 <input type="email" name="" id="" placeholder="Email" />
               </div>
               <div className="input-field">
-                <i>I</i>
                 <input type="password" name="" id="" placeholder="Password" />
               </div>
               <input type="submit" value="Sign Up" className="btn" />
